@@ -1,0 +1,16 @@
+.content img {
+    width: 80%;
+    text-align: center;
+    margin: 5px 10%;
+}
+.para{
+    text-indent: 4%;
+}
+ul li{
+    margin: 5px;
+}
+.content a{
+
+    color: #999;
+
+}

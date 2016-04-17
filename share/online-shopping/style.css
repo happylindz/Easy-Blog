@@ -1,0 +1,14 @@
+
+
+.content ul > li{
+    padding: 2%;
+    list-style: disc;
+}
+.content img{
+    width: 60%;
+    text-align: center;
+    margin: 0 20%;
+}
+.content ul li ul > li {
+    list-style: none;
+}

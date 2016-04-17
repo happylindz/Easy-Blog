@@ -1,0 +1,27 @@
+
+.info{
+    margin: 20px 3%;
+}
+.info > li{
+    margin-left: 5%;
+    text-indent: 0;
+    list-style: disc;
+}
+.intro{
+    width: 100%;
+    text-align: center;
+ }
+.intro img{
+    width: 60%;
+}
+
+.small{
+    font-size: 10px;
+}
+.small_pic{
+
+    width: 40% !important;
+
+}
+
+

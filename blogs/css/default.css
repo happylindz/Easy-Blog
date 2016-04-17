@@ -1,0 +1,304 @@
+/*
+    author:lindz
+    created:2015.12.3
+*/
+
+/*样式重置*/
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+    margin:0;
+    padding:0;
+}
+table {border-collapse:collapse;border-spacing:0;}
+fieldset,img { border:0;}
+address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;
+    font-weight:normal;}
+ol,ul {list-style:none;}
+caption,th {text-align:left;}
+q:before,q:after {content:'';}
+abbr,acronym { border:0;}
+
+
+/*导航设置*/
+
+body{
+    font: 100%/1.5  Avenir, Arial;
+    -webkit-font-smoothing: antialiased;
+}
+header{
+    width: 100%;
+    position: fixed;
+    height: 100px;
+    border-bottom: dashed gainsboro 1px;
+    overflow: hidden;
+    z-index: 9999;
+    background-color: white;
+    top: 0px;
+}
+header #nav{
+    width: 60%;
+    margin: 0 auto;
+    height: 100%;
+}
+header #nav .touxiang{
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    border: 1px white solid;
+    box-shadow: 0px 0px 5px 1px #b3b3b3;
+    transition: all 0.4s ease-out 0s;
+    margin:20px 4% 20px 0;
+    float: left;
+}
+header #nav .touxiang:hover{
+    transform: rotate(-720deg) scale(1.2);
+}
+
+header #nav #nav-bar{
+    display: -webkit-flex;
+
+}
+header #nav #nav-bar li {
+    display: inline-block;
+    line-height: 100px;
+    text-align: center;
+    flex: 1;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    margin:0 5px;
+}
+
+header #nav #nav-bar li a{
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    display: block;
+    margin: 30px 0;
+    width: 100px;
+    line-height: 40px;
+    transition: all 1s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+header #nav #nav-bar li a:hover{
+    color: #338a8c;
+    font-size: 20px;
+    /*transform: rotateZ(360deg);*/
+}
+
+header #nav #nav-bar .dot{
+    line-height: 100px;
+    height: 100px;
+}
+
+
+header #nav #nav-bar li a .line{
+    display: block;
+    position: absolute;
+    background: none;
+    transition: all 1s;
+
+}
+header #nav #nav-bar li a:hover .line{
+    background: #338a8c;
+}
+
+/*上边线条的动画*/
+header #nav #nav-bar li a .line-top{
+
+    height: 2px;
+    width: 0px;
+    left: -100%;
+    top: 0px;
+
+}
+header #nav #nav-bar li a:hover .line-top{
+    width: 100%;
+    left: 100%;
+}
+
+/*右边线条的动画*/
+
+header #nav #nav-bar li a .line-right{
+
+    height: 0px;
+    width: 2px;
+    top: -100%;
+    right: 0px;
+
+}
+header #nav #nav-bar li a:hover .line-right{
+    height: 100%;
+    top: 100%;
+}
+
+/*下边线条的动画*/
+header #nav #nav-bar li a .line-bottom{
+
+    height: 2px;
+    width: 0px;
+    right: -100%;
+    bottom: 0px;
+}
+header #nav #nav-bar li a:hover .line-bottom{
+    width: 100%;
+    right: 100%;
+}
+
+
+/*左边线条的动画*/
+header #nav #nav-bar li a .line-left{
+    width:2px;
+    height:0px;
+    left:0px;
+    bottom:-100%;
+}
+
+header #nav #nav-bar li a:hover  .line-left{
+    height:100%;
+    bottom:100%;
+}
+
+
+
+/*弹出层样式*/
+.mask{
+    background: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 9999;
+}
+.popup{
+    position: fixed;
+    z-index: 10000;
+    background: white url("../images/loading.gif") no-repeat center center;
+}
+.popup img{
+    display: none;
+}
+
+
+
+
+/*回到顶部样式设置*/
+#backtotop{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 150px;
+    bottom: 0px;
+    z-index: 9999;
+    opacity: 0.5;
+}
+#backtotop img{
+    width: 100%;
+}
+#backtotop:hover{
+    opacity: 0.9;
+}
+
+/*页脚*/
+#footer{
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}
+
+/*内容样式设置*/
+.content{
+    position: relative;
+    clear: both;
+    margin: 120px auto 0px;
+    width: 60%;
+}
+
+h1{
+    text-align: center;
+}
+
+@media screen and (min-width: 0) and (max-width: 360px){
+
+
+    header{
+        height: 70px;
+    }
+    header #nav {
+        width: 100%;
+    }
+    header #nav #nav-bar li{
+        height: 70px;
+        line-height: 70px;
+    }
+    header #nav #nav-bar li a{
+        font-size: 10px;
+        width: 50px;
+        margin: 15px 0;
+    }
+
+    header #nav #nav-bar li a:hover{
+        font-size: 13px;
+    }
+    header #nav .touxiang {
+        width: 44px;
+        height: 44px;
+        margin: 13px 0 13px 2%;
+    }
+
+    header #nav #nav-bar .dot{
+        line-height: 70px;
+        height: 70px;
+    }
+
+    .content{
+        width: 90%;
+        margin: 80px auto 0px;
+    }
+
+}
+
+@media screen and (min-width: 361px) and (max-width: 800px){
+
+
+    header{
+        height: 80px;
+    }
+    header #nav {
+        width: 90%;
+    }
+    header #nav #nav-bar li{
+        height: 80px;
+        line-height: 80px;
+    }
+    header #nav #nav-bar li a{
+        font-size: 14px;
+        width: 70px;
+        margin: 20px 0;
+    }
+
+    header #nav #nav-bar li a:hover{
+        font-size: 16px;
+    }
+    header #nav .touxiang {
+        width: 50px;
+        height: 50px;
+        margin: 14px 0 14px 2%;
+    }
+
+    header #nav #nav-bar .dot{
+        line-height: 80px;
+        height: 80px;
+    }
+
+    .content{
+        width: 90%;
+        margin: 100px auto 0px;
+    }
+
+
+}

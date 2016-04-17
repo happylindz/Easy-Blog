@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="author" content="Alvin_Lindz">
+    <meta name="description" content="记录生活、技术">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,minimum-scale=1">
+    <meta property="og:site_name" content="林东洲的博客"/>
+    <meta name="keywords" content="前端开发,移动互联网"/>
+    <link href="../images/icon.png" rel="shortcut icon">
+    <title>「实验设计」 	类似外卖系统设计 Suncafe</title>
+    <link rel="stylesheet" href="../css/default.css" type="text/css"/>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="../css/lightbox.css" type="text/css">
+</head>
+<body>
+
+    <<header>
+        <nav id="nav">
+            <a href="../../index.html"><img src="../images/touxiang.png" alt="头像" class="touxiang"/></a>
+            <ul id="nav-bar">
+                <li>
+                    <a href="../../blog.html">Blog
+                        <span class="line line-top"></span>
+                        <span class="line line-right"></span>
+                        <span class="line line-bottom"></span>
+                        <span class="line line-left"></span>
+                    </a>
+                </li>
+                <span class="dot">·</span>
+                <li>
+                    <a href="../../share.html">Share
+                        <span class="line line-top"></span>
+                        <span class="line line-right"></span>
+                        <span class="line line-bottom"></span>
+                        <span class="line line-left"></span>
+                    </a>
+                </li>
+                <span class="dot">·</span>
+                <li>
+                    <a href="https://github.com/happylindz">Github
+                        <span class="line line-top"></span>
+                        <span class="line line-right"></span>
+                        <span class="line line-bottom"></span>
+                        <span class="line line-left"></span>
+
+                    </a>
+                </li>
+                <span class="dot">·</span>
+                <li>
+                    <a href="../../resume.html">Resume
+                        <span class="line line-top"></span>
+                        <span class="line line-right"></span>
+                        <span class="line line-bottom"></span>
+                        <span class="line line-left"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <article class="content">
+        <h1 class="center">「实验设计」 	类似外卖系统设计 Suncafe</h1>
+        <p style="text-align: right">2015-11-15</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            一开始老师叫我们写一个基于JAVA跟咖啡有关的系统，我便想起我们食堂内的咖啡厅，夏天到来时许多同学都会选择到咖啡厅喝喝咖啡，要是能够开发一个类似外卖的系统，同学在宿舍想喝咖啡的就能够派上用场了。基于这个想法，我花了差不多一周的时间进行实现并参加班级答辩。
+        </p>
+        <ul class="info">
+            涉及技术（Java）：
+            <li>使用Swing包和windowbuilder进行UI界面的设计</li>
+            <li>使用Socket包进行简单的局域网通讯</li>
+            <li>使用JDOM2、DOM解析和读入XML文件，并使用XML存储信息</li>
+            <li>使用正则表达式对用户输入进行判断</li>
+        </ul>
+        <ul class="info">
+            客户端实现功能：
+            <li>输入手机号进行验证，通过可进入客户端下订单。</li>
+            <li>商品(咖啡、奶茶)以及所有属性的展示。</li>
+            <li>用户可根据需要将商品放入购物车中。</li>
+            <li>用户可根据实际需要跟卖家进行沟通。</li>
+            <li>用户成功下订单并获得订单信息。</li>
+        </ul>
+        <ul class="info">
+            服务端实现功能：
+            <li>卖家通过帐号密码登陆服务平台。</li>
+            <li>能够实时更新用户订单，并进行订单配送。</li>
+            <li>构建本地服务器，能够跟用户进行通讯。</li>
+            <li>能够察看用户订单的详细内容。</li>
+        </ul>
+        <p style="text-indent: 50px">源码: <a href="http://isgenius.me/GourmetCoffee.zip"><i>GourmetCoffee.zip</i></a></p>
+        <h2>下面简单演示操作:</h2>
+        <h3>客户端:</h3>
+        <div class="intro">
+            <img src="images/log_on.png" class="lightbox"/>
+            <p>(用户通过输入手机号和验证码登陆)</p>
+            <p class="small">tip:输入错误手机号和验证码无法登陆</p>
+
+            <img src="images/add_product.png" class="lightbox"/>
+            <p>(用户可根据左边的菜单信息挑选商品)</p>
+            <p class="small">tip:点击Purchase可以将商品加入购物车 点击settle可以进行订单确认</p>
+
+            <img src="images/confirm_order.png" class="lightbox"/>
+            <p>(用户确认购物车信息并个人信息)</p>
+
+            <img src="images/client_contact.png" class="lightbox"/>
+            <p>(用户有需求可与卖家通讯)</p>
+
+            <img src="images/print_order.png" class="small_pic lightbox"/>
+            <p>(确认订单 打印订单信息)</p>
+
+        </div>
+
+        <h3>服务端:</h3>
+        <div class="intro">
+            <img src="images/server_log_on.png" class="small_pic lightbox"/>
+            <p>(管理员登陆界面)</p>
+
+
+            <img src="images/watch_order.png" class="lightbox"/>
+            <p>(管理员管理订单)</p>
+            <p class="small">点击Refresh可刷新订单</p>
+            <p class="small">点击View可查看订单详情</p>
+            <p class="small">点击Contact可与用户通讯</p>
+
+            <img src="images/view_order.png" class="small_pic lightbox"/>
+            <p>(卖家查看订单信息)</p>
+
+            <img src="images/server_contact.png" class="lightbox"/>
+            <p>(卖家与买家通讯)</p>
+        </div>
+
+    </article>
+
+    <footer id="footer">
+        <p>Copyright &copy; 2015 Lindz | Easy Blog All rights reserved.</p>
+        <p>辽ICP备15007581号</p>
+    </footer>
+
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script src="../js/lightbox.js"></script>
+    <script src="../js/default.js"></script>
+    <script>
+        var lightbox = new lightBox();
+        lightbox.clickPic();
+    </script>
+</body>
+</html>
